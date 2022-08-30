@@ -1,0 +1,4 @@
+app:
+  toggles:
+    feature1: false
+    feature2: false
