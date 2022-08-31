@@ -22,10 +22,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - id: feature1_value
+      - name: Get Feature1 Value
+        id: feature1_value
         run: |
           value=$(grep -A1 'toggles:' test.yml | tail -n1)
           echo "::set-output name=value::${value}"
 
-      - name: result output
-        run: echo "The value is ${{ join(steps.feature1_value.outputs.*, ' ') }}"
+      - name: Check Feature1 Value
+        if: ${{ !endsWith(steps.feature1_value.outputs.value, 'false') }}
+        run: exit 1
+        # run: echo "The value is ${{ join(steps.feature1_value.outputs.*, ' ') }}"
