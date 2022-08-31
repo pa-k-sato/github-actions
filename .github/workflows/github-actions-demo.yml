@@ -16,3 +16,13 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
+  Yml-Value-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - id: feature1_value
+        run: |
+          value=$(grep -A1 'toggles:' test.yml | tail -n1)
+          echo "::set-output name=value::$(value)"
+
+      - name: result output
+        run: echo "The value is ${ steps.feature1_value.outputs.value }}"
