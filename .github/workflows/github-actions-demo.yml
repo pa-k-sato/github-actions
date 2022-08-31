@@ -25,4 +25,4 @@ jobs:
           echo "::set-output name=value::$(value)"
 
       - name: result output
-        run: echo "The value is ${ steps.feature1_value.outputs.value }}"
+        run: echo "The value is ${ join(steps.feature1_value.outputs.*, ' ') }}"
