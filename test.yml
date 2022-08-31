@@ -1,4 +1,4 @@
 app:
   toggles:
-    feature1: true
+    feature1: false
     feature2: false
