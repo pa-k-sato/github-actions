@@ -19,6 +19,9 @@ jobs:
   Yml-Value-Check:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - id: feature1_value
         run: |
           value=$(grep -A1 'toggles:' test.yml | tail -n1)
