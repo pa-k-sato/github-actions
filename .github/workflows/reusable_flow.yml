@@ -1,0 +1,11 @@
+on:
+  workflow_call:
+    inputs:
+      a-name:
+        type: string
+
+jos:
+  reusable_workflow_job:
+    steps:
+      - name: echo passed name
+        run: echo "passed is {a-name}"

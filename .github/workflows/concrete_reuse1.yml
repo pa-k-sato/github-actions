@@ -1,0 +1,5 @@
+jobs:
+  concrete-reuse1:
+    uses: ./github/workflows/reusable_flow.yml
+    with:
+      a-name: "from concrete"
