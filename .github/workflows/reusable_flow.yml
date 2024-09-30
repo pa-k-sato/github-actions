@@ -6,7 +6,7 @@ on:
       a-name:
         type: string
 
-jos:
+joss:
   reusable_workflow_job:
     steps:
       - name: echo passed name
