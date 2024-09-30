@@ -7,4 +7,4 @@ jobs:
     name: call reusable
     uses: ./.github/workflows/reusable_flow.yml
     with:
-      a-name: "from concrete["
+      a-name: "from concrete"
