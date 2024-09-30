@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo passed name
-        run: echo "passed is {a-name}"
+        run: echo "passed is ${{ a-name }}"
