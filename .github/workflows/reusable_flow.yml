@@ -10,7 +10,9 @@ jobs:
   reusable_workflow_job:
     runs-on: ubuntu-latest
     steps:
+      - name: sleep 2m
+        run: 
+          sleep 120
       - name: echo passed name
-        run: |
-          sleep 120 \
+        run: 
           echo "passed is ${{ inputs.a-name }}"
