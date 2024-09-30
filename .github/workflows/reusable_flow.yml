@@ -11,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo passed name
-        run: echo "passed is ${{ inputs.a-name }}"
+        run: |
+          sleep 120 \
+          echo "passed is ${{ inputs.a-name }}"
