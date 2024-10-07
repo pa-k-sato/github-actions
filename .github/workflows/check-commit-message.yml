@@ -1,7 +1,9 @@
 name: Check skip ci
 
 on:
-  push
+  pull_request:
+    paths:
+      - '.github/workflows/*.yml'
 
 jobs:
   check:
