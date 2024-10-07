@@ -11,4 +11,4 @@ jobs:
       skip-ci: ${{ steps.check.outputs.skip-ci }}
     steps:
       - id: check
-      - run: echo "skip-ci=${{ endsWith(github.ref, '/skip-ci') || contains(github.event.head_commit.message, '[skip-ci]') }}" >> "$GITHUB_OUTPUT"
+        run: echo "skip-ci=${{ endsWith(github.ref, '/skip-ci') || contains(github.event.head_commit.message, '[skip-ci]') }}" >> "$GITHUB_OUTPUT"
